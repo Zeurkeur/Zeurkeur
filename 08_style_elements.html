@@ -1,0 +1,29 @@
+<html>
+<head>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('#red').onclick=function(){
+        document.querySelector('#style_me').style.color='red';
+    }
+
+
+    document.querySelector('#green').onclick=() => {
+      document.querySelector('#style_me').style.color='green';
+
+    }
+
+    document.querySelector('#blue').onclick=() => {
+      document.querySelector('#style_me').style.color='blue';
+
+    }
+})
+</script>
+<body>
+  <h1 id="style_me"> Color me</h1>
+  <div>
+    <div>
+      <button id='red'> Red </button>
+      <button id='green'> Green </button>
+      <button id='blue'> Blue </button>
+      </div>

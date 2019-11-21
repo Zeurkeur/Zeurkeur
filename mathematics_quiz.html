@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+  <html>
+  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+      background-color: lightblue;
+    #myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 10%;
+  height: 30px;
+  background-color: #4CAF50;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+</style>
+<body>
+
+<h1>JavaScript Progress Bar</h1>
+
+<div id="myProgress">
+  <div id="myBar">10%</div>
+</div>
+
+<br>
+<button onclick="move()">Click Me</button>
+
+<script>
+var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 10;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerHTML = width  + "%";
+      }
+    }
+  }
+}
+
+
+</script>
+    </style>
+    </head>
+    <body>
+
+    <h1>Anthony Narvaez Project 2, Milestone 1:</h1>
+    <div class="container" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+
+    <script>
+    function myFunction(x) {
+      x.classList.toggle("change");
+    }
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#Paris {background-color:green;}
+#London{background-color:green;}
+#Tokyo {background-color:blue;}
+#Oslo {background-color:orange;}
+#Question_5 {background-color:red;}
+</style>
+</head>
+<body>
+
+<p>Click on the buttons inside the tabbed menu:</p>
+
+
+
+
+<div id="Paris" class="tabcontent">
+  <h1>Question 2: Arithmatic</h1>
+  <p>What is the answer for this question: 2+2=</p>
+
+  <form>
+    <input type="radio" name="number" value="1" checked> 1<br>
+    <input type="radio" name="number" value="2" checked> 2<br>
+    <input type="radio" name="number" value="3" checked> 3<br>
+    <input type="radio" name="number" value="4" checked> 4<br>
+  </form>
+
+
+</div>
+
+</div>
+
+
+
+<div id="Tokyo" class="tabcontent">
+  <h1>Question 3: Political Figures</h1>
+  <p>Who are some of the most influential political figures of all time?</p>
+
+    <form>
+      <input type="radio" name="number" value="1" checked> George Washington<br>
+      <input type="radio" name="number" value="2" checked> Barack Obama<br>
+      <input type="radio" name="number" value="3" checked> Alexandria-Ocasio Cortez<br>
+      <input type="radio" name="number" value="4" checked> JFK<br>
+      <input type="radio" name="number" value="5" checked> All of the above<br>
+    </form>
+
+</div>
+
+<div id="Oslo" class="tabcontent">
+  <h1>Multiplication</h1>
+  <p>Choose the correct answer for the expression: 5x2=</p>
+  <form>
+    <input type="radio" name="number" value="1" checked> 291<br>
+    <input type="radio" name="number" value="2" checked> 4542323<br>
+    <input type="radio" name="number" value="3" checked> 131231532z<br>
+    <input type="radio" name="number" value="4" checked> 21321543532<br>
+    <input type="radio" name="number" value="5" checked> 10<br>
+  </form>
+
+</div>
+
+<button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen">Question 1</button>
+<button class="tablink" onclick="openCity('Paris', this, 'green')">Question 2</button>
+<button class="tablink" onclick="openCity('Tokyo', this, 'blue')">Question 3</button>
+<button class="tablink" onclick="openCity('Oslo', this, 'orange')">Question 4</button>
+<button class="tablink" onclick="openCity('Question_5', this, 'red')">Question 5</button>
+
+<script>
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+document.getElementById("defaultOpen").click();
+</script>
+
+  </body>
+  </html>

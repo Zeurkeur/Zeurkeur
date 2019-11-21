@@ -1,0 +1,43 @@
+.box_table> table th{
+  background-color: lightblue;
+  text-align: left;
+}
+
+.backgroundtext> h1, .backgroundtext> form{
+  text-align: center;
+
+}
+
+.spanborder> span, .spanborder ul li{
+  color: darkblue;
+  font-size: 40px;
+
+}
+
+.colortext> a{
+color: gray;
+
+}
+
+.font> p{
+
+font-style: italic;
+font-size: 30px;
+font-family: "Times New Roman";
+}
+
+.backgroundposition{
+  background-position: center;
+  background-size: 100%;
+  background-image: linear-gradient(lightgray, skyblue);
+
+}
+
+
+#websites> img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+
+}
